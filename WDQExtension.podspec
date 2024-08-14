@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-个人开发者效率工具库
+  a easy way to work for ios with swift and uikit
                        DESC
 
   s.homepage         = 'https://github.com/wdq123550/WDQExtension.git'
