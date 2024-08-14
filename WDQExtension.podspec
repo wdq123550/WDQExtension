@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 个人开发者效率工具库
                        DESC
 
-  s.homepage         = 'https://github.com/WangDeqian/WDQExtension'
+  s.homepage         = 'https://github.com/wdq123550/WDQExtension.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'WangDeqian' => 'wdqandlq@icloud.com' }
-  s.source           = { :git => 'https://github.com/WangDeqian/WDQExtension.git', :tag => s.version.to_s }
+  s.author           = { 'wdq123550' => 'wdqandlq@icloud.com' }
+  s.source           = { :git => 'https://github.com/wdq123550/WDQExtension.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '15.0'
