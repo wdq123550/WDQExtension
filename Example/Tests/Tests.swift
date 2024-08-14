@@ -1,5 +1,5 @@
 import XCTest
-import WDQExtension
+//import WDQExtension
 
 class Tests: XCTestCase {
     

@@ -20,8 +20,18 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>用用你的相机</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>用用你的定位</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>用用你的麦克风</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>用用你的相册</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

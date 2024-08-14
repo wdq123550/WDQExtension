@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import WDQExtension
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        wdq.monitorNetworkReachability().sink { value in
+            print("网络\(value)")
+        }.store(in: &cancellables)
+
     }
 
     override func didReceiveMemoryWarning() {

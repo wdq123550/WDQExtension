@@ -1,0 +1,6 @@
+framework module WDQExtension {
+  umbrella header "WDQExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}
