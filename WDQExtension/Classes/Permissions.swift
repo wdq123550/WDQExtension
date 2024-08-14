@@ -112,7 +112,7 @@ extension WDQExtension: CLLocationManagerDelegate {
     
     
     /// 定位权限更改
-    private func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+    public func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         DispatchQueue.main.async {
             if manager == self.locationManager {
                 switch manager.authorizationStatus {
