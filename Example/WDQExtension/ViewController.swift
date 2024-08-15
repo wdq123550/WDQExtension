@@ -16,6 +16,7 @@ class ViewController: WDQVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         
 //        wdq.monitorNetworkReachability().sink { isSuccess in
@@ -69,6 +70,11 @@ class ViewController: WDQVC {
 //            make.centerY.equalToSuperview()
 //        }
         
+//        let t = wdq.toggle(thumbTintColor: .black, onTintColor: .red)
+//        self.view.addSubview(t)
+//        t.snp.makeConstraints { make in
+//            make.center.equalToSuperview()
+//        }
     }
     
     override func didReceiveMemoryWarning() {

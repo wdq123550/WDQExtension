@@ -25,6 +25,8 @@ open class WDQExtension: NSObject {
     internal let networkManager = NetworkReachabilityManager(host: "www.apple.com")!
 }
 
+public let scrollViewSpecialTagForNavigation = 1001
+
 public enum LocationPermissionsLevel {
     case whenInUse
     case always

@@ -23,7 +23,8 @@ extension WDQExtension {
                       font: UIFont?,
                       textColor: UIColor?,
                       textAlignment: NSTextAlignment = .left,
-                      layerSet: LayerSet?) -> WDQLabel {
+                      layerSet: LayerSet?) 
+    -> WDQLabel {
         let label = WDQLabel()
         label.text = text
         label.font = font
@@ -39,7 +40,8 @@ extension WDQExtension {
     public func imageView(contentMode: UIView.ContentMode = .scaleAspectFill, 
                           layerSet: LayerSet?,
                           clipsToBounds: Bool = true,
-                          image: UIImage?) -> WDQImageView {
+                          image: UIImage?) 
+    -> WDQImageView {
         let imageView = WDQImageView()
         imageView.contentMode = contentMode
         imageView.clipsToBounds = clipsToBounds
@@ -52,7 +54,8 @@ extension WDQExtension {
     
     /// 创建按钮
     public func button(layerSet: LayerSet?, 
-                       buttonItems: [ButtonItem]) -> WDQButton {
+                       buttonItems: [ButtonItem]) 
+    -> WDQButton {
         
         //config样式
         var config = UIButton.Configuration.plain()
@@ -142,7 +145,10 @@ extension WDQExtension {
         return t
     }
     
-    public func textView(font: UIFont?, 
+    
+    /// 创建文本编辑框
+    /// - Returns: WDQTextView
+    public func textView(font: UIFont?,
                          text: String?,
                          textColor: UIColor?,
                          bgColor: UIColor?,
@@ -150,7 +156,8 @@ extension WDQExtension {
                          attributedPlaceholder: NSAttributedString?,
                          tintColor: UIColor?,
                          maximumNumberOfLines: Int,
-                         layerSet: LayerSet?) -> WDQTextView {
+                         layerSet: LayerSet?) 
+    -> WDQTextView {
         let t = WDQTextView()
         t.font = font
         t.text = text
@@ -166,14 +173,30 @@ extension WDQExtension {
         return t
     }
     
-    public func scrollView(contentSize: CGSize, 
+    
+    /// 创建ScrollView
+    /// - Returns: WDQScrollView
+    public func scrollView(contentSize: CGSize,
                            bounces: Bool = true,
-                           pagingEnabled: Bool = false) -> WDQScrollView {
+                           pagingEnabled: Bool = false,
+                           needSpecialTag: Bool) 
+    -> WDQScrollView {
         let s = WDQScrollView()
         s.contentSize = contentSize
         s.bounces = bounces
         s.isPagingEnabled = pagingEnabled
+        s.tag = needSpecialTag ? scrollViewSpecialTagForNavigation : 0
         return s
     }
     
+    
+    /// 创建开关
+    /// - Returns: WDQSwitch
+    public func toggle(thumbTintColor: UIColor?, onTintColor: UIColor?) 
+    -> WDQSwitch {
+        let s = WDQSwitch()
+        s.onTintColor = onTintColor
+        s.thumbTintColor = thumbTintColor
+        return s
+    }
 }

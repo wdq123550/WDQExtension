@@ -35,6 +35,4 @@ extension WDQVC : UITableViewDataSource, UITableViewDelegate, UICollectionViewDe
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         UICollectionViewCell()
     }
-    
-    
 }

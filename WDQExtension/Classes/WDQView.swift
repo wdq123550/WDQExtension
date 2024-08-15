@@ -27,6 +27,4 @@ extension WDQView : UITableViewDataSource, UITableViewDelegate, UICollectionView
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         UICollectionViewCell()
     }
-    
-    
 }
