@@ -2,23 +2,24 @@
   "name": "WDQExtension",
   "version": "1.0.0",
   "summary": "iOS Swift + UIKit development util",
-  "description": "个人开发者效率工具库",
-  "homepage": "https://github.com/WangDeqian/WDQExtension",
+  "description": "a easy way to work for ios with swift and uikit",
+  "homepage": "https://github.com/wdq123550/WDQExtension.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "WangDeqian": "wdqandlq@icloud.com"
+    "wdq123550": "wdqandlq@icloud.com"
   },
   "source": {
-    "git": "https://github.com/WangDeqian/WDQExtension.git",
+    "git": "https://github.com/wdq123550/WDQExtension.git",
     "tag": "1.0.0"
   },
   "platforms": {
     "ios": "15.0"
   },
   "source_files": "WDQExtension/Classes/**/*",
+  "swift_versions": "5.5",
   "frameworks": [
     "Foundation",
     "UIKit",
@@ -52,6 +53,10 @@
     ],
     "SVProgressHUD": [
       "~> 2.3.1"
+    ],
+    "RSKGrowingTextView": [
+      "~> 8.0.0"
     ]
-  }
+  },
+  "swift_version": "5.5"
 }

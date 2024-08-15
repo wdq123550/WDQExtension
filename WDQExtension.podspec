@@ -48,5 +48,6 @@ Pod::Spec.new do |s|
    s.dependency 'SmartCodable', '~> 4.1.3'
    s.dependency 'SnapKit', '~> 5.7.1'
    s.dependency 'SVProgressHUD', '~> 2.3.1'
+   s.dependency 'RSKGrowingTextView', '~> 8.0.0'
    
 end

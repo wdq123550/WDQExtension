@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Alamofire
 import Combine
 import AVFoundation
 import Photos
@@ -14,6 +13,7 @@ import CoreLocation
 import RxSwift
 import RxCocoa
 import UserNotifications
+import CoreTelephony
 
 extension WDQExtension: CLLocationManagerDelegate {
     
@@ -21,25 +21,18 @@ extension WDQExtension: CLLocationManagerDelegate {
     /// - Returns: PassthroughSubject<Bool, Never>
     public func monitorNetworkReachability() -> PassthroughSubject<Bool, Never> {
         let subject = PassthroughSubject<Bool, Never>()
-        let reachability = NetworkReachabilityManager(host: "www.apple.com")
-        reachability?.startListening(onUpdatePerforming: { status in
+        self.networkManager.startListening(onQueue: DispatchQueue(label: "networkManager")) { status in
             DispatchQueue.main.async {
                 switch status {
-                case .notReachable:
+                case .notReachable, .unknown:
                     subject.send(false)
-                    subject.send(completion: .finished)
-                case .unknown:
-                    subject.send(false)
-                    subject.send(completion: .finished)
                 case .reachable(_):
                     subject.send(true)
-                    subject.send(completion: .finished)
                 }
             }
-        })
+        }
         return subject
     }
-    
     
     //NSPhotoLibraryUsageDescription，NSPhotoLibraryAddUsageDescription
     /// 获取相册使用权限
