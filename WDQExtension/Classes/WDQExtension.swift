@@ -85,6 +85,9 @@ public struct TextFieldAssistView {
     }
 }
 
+public enum RefreshType {
+    case new, more
+}
 
 //MARK: - extension
 

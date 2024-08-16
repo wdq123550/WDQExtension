@@ -337,6 +337,9 @@
 		837AFC5720DC7B8B77C403DEBDCBA55D /* UISearchBar+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC717ECEE4E747863979199B7487D6 /* UISearchBar+Rx.swift */; };
 		8385F247A6D3C31E726A84803117820F /* DispatchQueue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B5D1764122653EED257F5CC44FCD85 /* DispatchQueue+Extensions.swift */; };
 		83FA055B80C82D5090D4226D61E9A47D /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BE5877BD7F6A3F1475BE4770F3F345 /* DisposeBag.swift */; };
+		8414FAC72C6EF536009DEF7F /* WDQTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414FAC62C6EF536009DEF7F /* WDQTableVC.swift */; };
+		8414FAC92C6EF9D4009DEF7F /* TableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414FAC82C6EF9D4009DEF7F /* TableViewCellProtocol.swift */; };
+		8414FACB2C6F0468009DEF7F /* WDQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414FACA2C6F0468009DEF7F /* WDQTableViewCell.swift */; };
 		843C03DE2C6E040C003609D3 /* WDQSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C03DD2C6E040C003609D3 /* WDQSwitch.swift */; };
 		843C03E12C6E09CF003609D3 /* WDQNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C03E02C6E09CF003609D3 /* WDQNavigationVC.swift */; };
 		843C03E82C6E13CE003609D3 /* WDQTarBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C03E72C6E13CE003609D3 /* WDQTarBarVC.swift */; };
@@ -1200,6 +1203,9 @@
 		830B27238D83DCE49E144865720B7FB0 /* RxTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTarget.swift; path = RxCocoa/Common/RxTarget.swift; sourceTree = "<group>"; };
 		83A97583FE82608E69EFEA985E51DBE5 /* DeviceKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DeviceKit.debug.xcconfig; sourceTree = "<group>"; };
 		83AB7C035B3C98DF9C652EE550CB1146 /* ObservableConvertibleType+SharedSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableConvertibleType+SharedSequence.swift"; path = "RxCocoa/Traits/SharedSequence/ObservableConvertibleType+SharedSequence.swift"; sourceTree = "<group>"; };
+		8414FAC62C6EF536009DEF7F /* WDQTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WDQTableVC.swift; path = WDQExtension/Classes/WDQTableVC.swift; sourceTree = "<group>"; };
+		8414FAC82C6EF9D4009DEF7F /* TableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCellProtocol.swift; path = WDQExtension/Classes/TableViewCellProtocol.swift; sourceTree = "<group>"; };
+		8414FACA2C6F0468009DEF7F /* WDQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WDQTableViewCell.swift; path = WDQExtension/Classes/WDQTableViewCell.swift; sourceTree = "<group>"; };
 		843C03DD2C6E040C003609D3 /* WDQSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WDQSwitch.swift; path = WDQExtension/Classes/WDQSwitch.swift; sourceTree = "<group>"; };
 		843C03E02C6E09CF003609D3 /* WDQNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WDQNavigationVC.swift; path = WDQExtension/Classes/WDQNavigationVC.swift; sourceTree = "<group>"; };
 		843C03E72C6E13CE003609D3 /* WDQTarBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WDQTarBarVC.swift; path = WDQExtension/Classes/WDQTarBarVC.swift; sourceTree = "<group>"; };
@@ -1821,6 +1827,9 @@
 				843C03DD2C6E040C003609D3 /* WDQSwitch.swift */,
 				843C03E02C6E09CF003609D3 /* WDQNavigationVC.swift */,
 				843C03E72C6E13CE003609D3 /* WDQTarBarVC.swift */,
+				8414FAC62C6EF536009DEF7F /* WDQTableVC.swift */,
+				8414FAC82C6EF9D4009DEF7F /* TableViewCellProtocol.swift */,
+				8414FACA2C6F0468009DEF7F /* WDQTableViewCell.swift */,
 				A8B09AAE61AD914EA0597570DA0C2EB5 /* Pod */,
 				25FEBC17C43F7F3F4C8CD62F04895DA9 /* Support Files */,
 			);
@@ -4174,11 +4183,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8414FACB2C6F0468009DEF7F /* WDQTableViewCell.swift in Sources */,
 				D9A2541FF3E42213693049AC81A8DD71 /* Permissions.swift in Sources */,
 				84EFEB172C6DF8ED00F4E381 /* WDQImageView.swift in Sources */,
 				84EFEB1A2C6DF8ED00F4E381 /* WDQButton.swift in Sources */,
 				F2E3BDD310C40D504B3757BB553C4F0D /* WDQExtension.swift in Sources */,
+				8414FAC72C6EF536009DEF7F /* WDQTableVC.swift in Sources */,
 				84EFEB162C6DF8ED00F4E381 /* WDQLabel.swift in Sources */,
+				8414FAC92C6EF9D4009DEF7F /* TableViewCellProtocol.swift in Sources */,
 				843C03E12C6E09CF003609D3 /* WDQNavigationVC.swift in Sources */,
 				84EFEB192C6DF8ED00F4E381 /* WDQScrollView.swift in Sources */,
 				84EFEB1D2C6DF8ED00F4E381 /* WDQTextField.swift in Sources */,

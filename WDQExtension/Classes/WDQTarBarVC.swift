@@ -7,9 +7,9 @@
 
 import UIKit
 
-class WDQTarBarVC: UITabBarController {
+open class WDQTarBarVC: UITabBarController {
 
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = .white

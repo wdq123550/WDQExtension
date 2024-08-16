@@ -13,7 +13,7 @@ import Alamofire
 import RSKGrowingTextView
 
 class ViewController: WDQVC {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,7 +58,7 @@ class ViewController: WDQVC {
 //            make.centerY.equalToSuperview()
 //        }
         
-//        let t = wdq.textView(font: .systemFont(ofSize: 24, weight: .bold), text: nil, textColor: .black, bgColor: .lightGray, textAlignment: .center, attributedPlaceholder: NSAttributedString(string: "请输入内容", attributes: [
+//        let t = wdq.textView(font: .systemFont(ofSize: 24, weight: .bold), text: nil, textColor: .black, bgColor: .lightGray, textAlignment: .left, attributedPlaceholder: NSAttributedString(string: "请输入内容", attributes: [
 //            .font: UIFont.systemFont(ofSize: 24, weight: .bold),
 //            .foregroundColor: UIColor.gray
 //        ]), tintColor: .red, maximumNumberOfLines: 1, layerSet: LayerSet(cornerRadius: 5, borderWidth: 2, borderColor: .black))
@@ -75,6 +75,18 @@ class ViewController: WDQVC {
 //        t.snp.makeConstraints { make in
 //            make.center.equalToSuperview()
 //        }
+        
+        let t = WDQTableVC(startPage: 1, style: .plain)
+        self.addChildViewController(t)
+        t.refresh(with: .new) { refreshCallback in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                let datas = [
+                    "gg",
+                    "ss"
+                ]
+                refreshCallback(datas)
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {

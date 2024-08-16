@@ -21,17 +21,16 @@ open class WDQNavigationVC: UINavigationController, UIGestureRecognizerDelegate 
     }
     
     override init(rootViewController: UIViewController) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("init(rootViewController:) has not been implemented")
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("init(nibName: bundle:) has not been implemented")
     }
     
     init(){
-        fatalError("init(coder:) has not been implemented")
+        fatalError("init() has not been implemented")
     }
-    
     
     open override func viewDidLoad() {
         super.viewDidLoad()
